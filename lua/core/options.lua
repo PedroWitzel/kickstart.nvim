@@ -1,6 +1,5 @@
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
-vim.g.material_style = 'deep ocean'
 
 -- [[ Setting.o.ons ]]
 -- See `:help vim.o`

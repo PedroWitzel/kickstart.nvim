@@ -1,5 +1,4 @@
 return {
-  'marko-cerovac/material.nvim',
   'nvim-lua/plenary.nvim', --lua functions that many plugins use
   {
     'folke/lazydev.nvim',
