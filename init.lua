@@ -1,5 +1,4 @@
 require 'core'
-
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
@@ -186,10 +185,10 @@ require('lazy').setup({
         underline = { severity = vim.diagnostic.severity.ERROR },
         signs = vim.g.have_nerd_font and {
           text = {
-            [vim.diagnostic.severity.ERROR] = '� ',
-            [vim.diagnostic.severity.WARN] = '� ',
-            [vim.diagnostic.severity.INFO] = '� ',
-            [vim.diagnostic.severity.HINT] = '� ',
+            [vim.diagnostic.severity.ERROR] = ' ',
+            [vim.diagnostic.severity.WARN] = '  ',
+            [vim.diagnostic.severity.INFO] = '  ',
+            [vim.diagnostic.severity.HINT] = ' ',
           },
         } or {},
         virtual_text = {
