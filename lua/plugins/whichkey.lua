@@ -44,11 +44,14 @@ return { -- Useful plugin to show you pending keybinds.
 
     -- Document existing key chains
     spec = {
+      { '<leader>c', group = '[C]lean up' },
       { '<leader>l', group = '[L]SP' },
+      { '<leader>g', group = '[G]it' },
       { '<leader>s', group = '[S]earch' },
       { '<leader>t', group = '[T]oggle' },
       { '<leader>w', group = '[W]indows and splits' },
       { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+      { '<leader>x', group = 'Trouble lists' },
     },
   },
 }
