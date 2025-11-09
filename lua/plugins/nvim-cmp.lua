@@ -6,11 +6,7 @@ return {
   dependencies = {
     'hrsh7th/cmp-buffer', -- source for text in buffer
     'hrsh7th/cmp-path', -- source for file system paths
-    {
-      'L3MON4D3/LuaSnip',
-      -- follow latest release.
-      version = 'v2.*', -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-    },
+    'L3MON4D3/LuaSnip',
   },
   config = function()
     local cmp = require 'cmp'
@@ -29,7 +25,6 @@ return {
 
       -- autocompletion sources
       sources = cmp.config.sources {
-        { name = 'lazydev' },
         { name = 'nvim_lsp' },
         { name = 'buffer' }, -- text within current buffer
         { name = 'path' }, -- file system paths
