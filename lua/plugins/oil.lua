@@ -1,14 +1,18 @@
 return {
   'stevearc/oil.nvim',
-  -- enabled = false,
   dependencies = { 'nvim-tree/nvim-web-devicons' },
   config = function()
     require('oil').setup {
       default_file_explorer = true, -- start up nvim with oil instead of netrw
-      columns = {},
+      columns = {
+        'icon',
+      },
+      float = {
+        padding = 2,
+        border = 'rounded',
+      },
       keymaps = {
         ['<C-h>'] = false,
-        ['<C-c>'] = false, -- prevent from closing Oil as <C-c> is esc key
         ['<M-h>'] = 'actions.select_split',
         ['q'] = 'actions.close',
       },
