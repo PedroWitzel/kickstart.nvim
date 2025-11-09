@@ -6,7 +6,14 @@ return {
   dependencies = {
     'hrsh7th/cmp-buffer', -- source for text in buffer
     'hrsh7th/cmp-path', -- source for file system paths
-    'L3MON4D3/LuaSnip',
+    {
+      'L3MON4D3/LuaSnip',
+      version = '2.*',
+      build = (function()
+        return 'make install_jsregexp'
+      end)(),
+      opts = {},
+    },
   },
   config = function()
     local cmp = require 'cmp'
