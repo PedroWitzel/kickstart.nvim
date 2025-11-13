@@ -18,10 +18,16 @@ return {
   },
   config = function()
     require('conform').setup {
-      format_on_save = {
-        lsp_format = 'fallback',
-        timeout_ms = 500,
-      },
+      format_on_save = function(bufnr)
+        local ft = vim.bo[bufnr].filetype
+        if ft == 'xml' then
+          return
+        end
+        return {
+          lsp_format = 'fallback',
+          timeout_ms = 500,
+        }
+      end,
     }
   end,
 }
